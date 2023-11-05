@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import OurCook from "./OurCook";
+import Ourresturant from "./Ourresturant";
 import SeeAllBtn from "./SeeAllBtn";
 import TopFoodSec from "./TopFoodSec";
 
@@ -10,6 +11,7 @@ const Home = () => {
            <TopFoodSec></TopFoodSec>
            <SeeAllBtn></SeeAllBtn>
            <OurCook></OurCook>
+           <Ourresturant></Ourresturant>
         </div>
     );
 };
