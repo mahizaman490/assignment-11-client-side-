@@ -27,7 +27,7 @@ const Footer = () => {
 </footer> 
 <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
   <aside className="items-center grid-flow-col">
- <img  className='w-24 h-24 rounded-full' src="https://i.ibb.co/r2ccyRn/23254587-christmas-2012-new-1771.jpg" alt="" />
+ <img  className='w-10 h-10 rounded-full' src="https://i.ibb.co/r2ccyRn/23254587-christmas-2012-new-1771.jpg" alt="" />
     <p>FlavorFusion Palace <br/>Copyright © 2023 - All right reserved by FlavorFusion Palace</p>
   </aside> 
   <nav className="md:place-self-center md:justify-self-end">
