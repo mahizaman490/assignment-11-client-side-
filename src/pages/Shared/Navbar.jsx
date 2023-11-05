@@ -23,7 +23,7 @@ const Navbar = () => {
               {navlinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl">  <h1 className="font-bold bg-gradient-to-r from-[#ff0000] via-orange-500 to-yellow-400  text-transparent   bg-clip-text">FlavorFusion Palace</h1></a>
+          <a className="btn btn-ghost normal-case text-2xl">  <h1 className="font-bold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">FlavorFusion Palace</h1></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
