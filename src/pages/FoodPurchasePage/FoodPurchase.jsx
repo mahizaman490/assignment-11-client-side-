@@ -19,8 +19,8 @@ const FoodPurchase = () => {
     
     return (
 
-<div className="bg-[#F4F3F0] p-24">
-<h2 className="text-3xl font-bold">purchase the Food item</h2>
+<div className="p-24">
+<h2 className="text-3xl font-bold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">purchase the Food item</h2>
 <form onSubmit={handlePurchase}>
  
     <div className="md:flex">
