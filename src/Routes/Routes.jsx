@@ -6,6 +6,11 @@ import AllFoodItems from "../pages/Foods/AllFoodItems";
 import SingleFoodItem from "../pages/Foods/SingleFoodItem";
 import FoodPurchase from "../pages/FoodPurchasePage/FoodPurchase";
 import Blog from "../pages/Blogpage/Blog";
+import LogIn from "../pages/Login/LogIn";
+import Register from "../pages/Register/Register";
+import MyAddedFoodItem from "../pages/MyAddedFoodItem/MyAddedFoodItem";
+import AddAFoodItem from "../pages/AddAFoodItem/AddAFoodItem";
+import MyOrders from "../pages/MyOrders/MyOrders";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +35,26 @@ const router = createBrowserRouter([
         {
             path:'/foodpurchase',
             element:<FoodPurchase></FoodPurchase>,
+        },
+        {
+            path:'/login',
+            element:<LogIn></LogIn>,
+        },
+        {
+            path:'/register',
+            element:<Register></Register>,
+        },
+        {
+            path:'/myaddedfooditems',
+            element:<MyAddedFoodItem></MyAddedFoodItem>,
+        },
+        {
+            path:'/addafooditem',
+            element:<AddAFoodItem></AddAFoodItem>,
+        },
+        {
+            path:'/myorderpage',
+            element:<MyOrders></MyOrders>,
         },
         {
             path:'/blog',
