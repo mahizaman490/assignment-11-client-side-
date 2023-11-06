@@ -6,9 +6,9 @@ const Footer = () => {
         <footer className="footer p-10 bg-base-200 text-base-content">
   <nav>
     <header className="footer-title">Contact</header> 
-    <a className="link link-hover">++880171222332</a> 
-    <a className="link link-hover">++880173334433</a> 
-    <a className="link link-hover">++880174277747</a> 
+    <a className="link link-hover">++880144444444</a> 
+    <a className="link link-hover">++880133333333</a> 
+    <a className="link link-hover">++880177777777</a> 
     <a className="link link-hover">Mahizaman333@gmail.com</a>
   </nav> 
   <nav>

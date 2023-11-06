@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const SingleFoodItem = () => {
@@ -14,10 +15,12 @@ const SingleFoodItem = () => {
           <h2 className="card-title text-red-600">price:<span className="text-slate-800">$776</span></h2>
           <h2 className="card-title text-red-600">Made BY: <span className="text-slate-800">Mahi Zaman Achol</span></h2>
           <h2 className="card-title text-red-600">Food Origin:<span className="text-slate-800"> Bangladesh</span></h2>
-         
+       
      
           <div className="card-actions justify-end">
-            <button className="btn btn-outline btn-error w-40">Order Item</button>
+           <Link to='/foodpurchase'>
+           <button className="btn btn-outline btn-error w-40">Order Item</button>
+           </Link>
           </div>
         </div>
       </div>
