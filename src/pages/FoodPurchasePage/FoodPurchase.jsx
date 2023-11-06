@@ -87,7 +87,7 @@ const FoodPurchase = () => {
     </div>
  
 
-    <input type="submit" value="Update Food" className="btn w-full mt-4 bg-gradient-to-r from-[#ff0000] to-orange-600 text-white ... "/>
+    <input type="submit" value="purchase the Food item" className="btn w-full mt-4 bg-gradient-to-r from-[#ff0000] to-orange-600 text-white ... "/>
 </form>
 </div>
     );

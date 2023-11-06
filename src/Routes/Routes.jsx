@@ -5,6 +5,7 @@ import Error from "../errPage/Error";
 import AllFoodItems from "../pages/Foods/AllFoodItems";
 import SingleFoodItem from "../pages/Foods/SingleFoodItem";
 import FoodPurchase from "../pages/FoodPurchasePage/FoodPurchase";
+import Blog from "../pages/Blogpage/Blog";
 
 const router = createBrowserRouter([
     {
@@ -25,10 +26,14 @@ const router = createBrowserRouter([
             element:<SingleFoodItem></SingleFoodItem>,
         },
         //this is a private page
-        
+
         {
             path:'/foodpurchase',
             element:<FoodPurchase></FoodPurchase>,
+        },
+        {
+            path:'/blog',
+            element:<Blog></Blog>,
         }
       ]
     },
