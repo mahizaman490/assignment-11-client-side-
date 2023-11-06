@@ -25,6 +25,7 @@ const router = createBrowserRouter([
             element:<SingleFoodItem></SingleFoodItem>,
         },
         //this is a private page
+        
         {
             path:'/foodpurchase',
             element:<FoodPurchase></FoodPurchase>,
