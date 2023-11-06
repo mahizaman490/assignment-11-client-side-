@@ -53,8 +53,8 @@ const Navbar = () => {
               {nav2link}
             </ul>
           </div>
-        <div className="md:block mt-2">
-        <small className="block">my proffile</small>
+        <div className="md:block mt-5">
+       
            <small className="block">User Name</small>
         </div>
         </div>
