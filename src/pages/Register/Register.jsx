@@ -51,7 +51,7 @@ const Register = () => {
               </div>
             </form>
             <p className="pb-3 pl-3"><span className="text-black ">have an account here? </span> <Link to='/login' className="text-white font-bold underline">LogIn</Link></p>
-            <p><button className="btn btn-ghost w-full mb-2 text-slate-950"> SignIn with Google</button></p>
+
           </div>
           {/* {
           loginError && <p className="text-red-700">{loginError}</p>

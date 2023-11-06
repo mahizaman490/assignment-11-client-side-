@@ -1,0 +1,103 @@
+ [
+      {
+        "Food_name": "Spaghetti Bolognese",
+        "Food_image": "https://i.ibb.co/85cZdVd/comida-lifestyle-spaghetti-foodie-gastronomy-1.jpg",
+        "Food_category": "Pasta",
+        "quantity": "8",
+        "price": 12.99,
+        "Food_origin": "Italy",
+        "description": "A classic Italian pasta dish featuring al dente spaghetti with a rich and savory meat sauce. It is made with ground beef, tomatoes, onions, garlic, olive oil, salt, black pepper, basil, and oregano.\n\n**Making Procedure**:\n1. Cook spaghetti according to package instructions. Drain and set aside.\n2. In a pan, heat olive oil over medium heat. Add minced garlic and diced onions; sauté until fragrant and translucent.\n3. Add ground beef and cook until browned. Break it into small pieces while cooking.\n4. Stir in diced tomatoes, salt, black pepper, basil, and oregano. Simmer for about 15-20 minutes, stirring occasionally.\n5. Serve the Bolognese sauce over cooked spaghetti."
+      },
+      {
+        "Food_name": "Chicken Tikka Masala",
+        "Food_image": "https://i.ibb.co/g7tcHL6/closeup-shot-deliciously-prepared-chicken-served-with-onions-chili-sauce.jpg",
+        "Food_category": "Indian",
+        "quantity": "3",
+        "price": 14.99,
+        "Food_origin": "India",
+        "description": "Tender chicken pieces in a creamy tomato-based sauce with a blend of Indian spices. It is made with chicken, yogurt, tomatoes, cream, ginger, garlic, garam masala, cumin, coriander, turmeric, paprika, chili powder, and salt.\n\n**Making Procedure**:\n1. Marinate chicken pieces in yogurt and spices for a few hours.\n2. Grill the marinated chicken until charred and cooked.\n3. In a separate pan, sauté ginger and garlic, then add tomatoes and spices.\n4. Simmer until the sauce thickens, then stir in cream.\n5. Add the grilled chicken pieces and simmer until heated through.\n6. Serve with naan or rice."
+      },
+      {
+        "Food_name": "Caesar Salad",
+        "Food_image": "https://i.ibb.co/dc5MwfR/top-view-tasty-salad-with-vegetables.jpg",
+        "Food_category": "Salad",
+        "quantity": "7",
+        "price": 9.99,
+        "Food_origin": "USA",
+        "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese. It is made with romaine lettuce, Caesar dressing, croutons, and Parmesan cheese.\n\n**Making Procedure**:\n1. Wash and dry romaine lettuce, then tear it into bite-sized pieces.\n2. Toss the lettuce with Caesar dressing until well coated.\n3. Add croutons and grated Parmesan cheese.\n4. Serve immediately for the best freshness and flavor."
+      },
+      {
+        "Food_name": "Sushi Platter",
+        "Food_image": "https://i.ibb.co/DzpSq7x/painting-sushi-plate-with-picture-fish-it.jpg",
+        "Food_category": "Japanese",
+        "quantity": "1",
+        "price": 19.99,
+        "Food_origin": "Japan",
+        "description": "A delightful assortment of fresh sushi rolls and sashimi.\n\n**Making Procedure**:\nOur skilled sushi chefs prepare this platter with the utmost care and precision to ensure a delicious and visually appealing experience."
+      },
+      {
+        "Food_name": "Margherita Pizza",
+        "Food_image": "https://i.ibb.co/k0vNVXZ/slice-crispy-pizza-with-meat-cheese.jpg",
+        "Food_category": "Pizza",
+        "quantity": "6",
+        "price": 10.99,
+        "Food_origin": "Italy",
+        "description": "A simple and delectable pizza with tomatoes, mozzarella, and fresh basil. It is made with pizza dough, tomatoes, mozzarella cheese, fresh basil, olive oil, and salt.\n\n**Making Procedure**:\n1. Roll out the pizza dough to your desired thickness.\n2. Spread a thin layer of tomato sauce over the dough.\n3. Sprinkle mozzarella cheese evenly and top with fresh basil leaves.\n4. Drizzle with olive oil and a pinch of salt.\n5. Bake in a preheated oven until the crust is golden and the cheese is bubbly."
+      },
+      {
+        "Food_name": "Beef Tacos",
+        "Food_image": "https://i.ibb.co/Pr2LpnM/mexican-tacos-with-beef-tomato-sauce-salsa.jpg",
+        "Food_category": "Mexican",
+        "quantity": "45",
+        "price": 11.99,
+        "Food_origin": "Mexico",
+        "description": "Soft tortillas filled with seasoned ground beef, fresh salsa, and sour cream. It is made with ground beef, tortillas, lettuce, tomato, onion, cilantro, sour cream, and taco seasoning.\n\n**Making Procedure**:\n1. Brown ground beef and add taco seasoning for flavor.\n2. Warm the tortillas.\n3. Assemble the tacos with beef, lettuce, tomato, onion, cilantro, and a dollop of sour cream."
+      },
+      {
+        "Food_name": "Mushroom Risotto",
+        "Food_image": "https://i.ibb.co/JQkg1jP/delicious-mushroom-risotto-white-bowl-with-spoon.jpg",
+        "Food_category": "Italian",
+        "quantity": "19",
+        "price": 13.99,
+        "Food_origin": "Italy",
+        "description": "Creamy Italian risotto made with Arborio rice, mushrooms, and Parmesan cheese. It is made with Arborio rice, mushrooms, white wine, onion, garlic, vegetable broth, Parmesan cheese, and butter.\n\n**Making Procedure**:\n1. Sauté onions and garlic in butter until translucent.\n2. Add Arborio rice and stir to coat with the buttery mixture.\n3. Deglaze with white wine and cook until mostly absorbed."
+      },
+      {
+        "Food_name": "Shrimp Scampi",
+        "Food_image": "shrimp_scampi.jpg",
+        "Food_category": "Seafood",
+        "quantity": "10",
+        "price": 15.99,
+        "Food_origin": "Italy",
+        "description": "Succulent shrimp sautéed in garlic, white wine, butter, and lemon juice, served over linguine. It is made with shrimp, linguine, garlic, white wine, butter, lemon juice, parsley, salt, and black pepper.\n\n**Making Procedure**:\n1. Cook linguine according to package instructions. Drain and set aside.\n2. In a pan, melt butter and sauté minced garlic until fragrant.\n3. Add shrimp and cook until pink.\n4. Deglaze with white wine and lemon juice.\n5. Toss cooked linguine in the sauce and garnish with parsley."
+      },
+      {
+        "Food_name": "Greek Salad",
+        "Food_image": "greek_salad.jpg",
+        "Food_category": "Salad",
+        "quantity": "43",
+        "price": 8.99,
+        "Food_origin": "Greece",
+        "description": "A refreshing salad with cucumbers, tomatoes, olives, feta cheese, and Greek dressing. It is made with cucumbers, tomatoes, olives, feta cheese, and Greek dressing.\n\n**Making Procedure**:\n1. Combine cucumbers, tomatoes, olives, and feta cheese in a bowl.\n2. Toss with Greek dressing until well coated."
+      },
+      {
+        "Food_name": "Chicken Pad Thai",
+        "Food_image": "chicken_pad_thai.jpg",
+        "Food_category": "Thai",
+        "quantity": "17",
+        "price": 12.99,
+        "Food_origin": "Thailand",
+        "description": "Stir-fried rice noodles with chicken, tofu, peanuts, and Thai spices. It is made with rice noodles, chicken, tofu, peanuts, bean sprouts, eggs, garlic, fish sauce, tamarind paste, sugar, and chili flakes.\n\n**Making Procedure**:\n1. Stir-fry chicken and tofu until cooked.\n2. Add rice noodles, peanuts, bean sprouts, and eggs.\n3. Mix in garlic, fish sauce, tamarind paste, sugar, and chili flakes.\n4. Serve hot with a lime wedge."
+      },
+      {
+        "Food_name": "BBQ Ribs",
+        "Food_image": "bbq_ribs.jpg",
+        "Food_category": "American",
+        "quantity": "14",
+        "price": 16.99,
+        "Food_origin": "USA",
+        "description": "Tender and smoky BBQ ribs with a tangy barbecue sauce. They are made with pork ribs, barbecue sauce, brown sugar, paprika, garlic powder, onion powder, salt, and black pepper.\n\n**Making Procedure**:\n1. Rub the ribs with a mixture of brown sugar, paprika, garlic powder, onion powder, salt, and black pepper.\n2. Smoke or grill the ribs until tender.\n3. Glaze with barbecue sauce and cook until caramelized."
+      }
+    ]
+ 
+  
