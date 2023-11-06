@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -5,6 +6,12 @@ const Register = () => {
 
     }
     return (
+ <>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>FlavourFusion|Register</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <div className="hero min-h-screen bg-base-200 ">
         <div className="hero-content flex-col w-2/4 ">
           <div className="">
@@ -54,6 +61,7 @@ const Register = () => {
         <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />
        </div>
       </div>
+ </>
     );
 };
 

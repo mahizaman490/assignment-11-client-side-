@@ -1,8 +1,15 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 
 const SingleFoodItem = () => {
     return (
+    <>
+      <Helmet>
+      <meta charSet="utf-8" />
+      <title>FlavourFusion|SingleFoodItem</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+  </Helmet>
         <div className="card  bg-base-100 ">
         <figure><img src="https://i.ibb.co/mHQ06rg/top-view-table-full-food.jpg" alt="Album"/></figure>
         <div className="card-body">
@@ -24,6 +31,7 @@ const SingleFoodItem = () => {
           </div>
         </div>
       </div>
+    </>
     );
 };
 

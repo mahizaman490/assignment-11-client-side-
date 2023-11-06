@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const LogIn = () => {
@@ -5,7 +6,13 @@ const LogIn = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+      <>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>FlavourFusion|LogIn</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+            <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col w-2/4">
           <div className="">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Login now!</h1>
@@ -41,6 +48,8 @@ const LogIn = () => {
         <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />
        </div>
       </div>
+      </>
+     
     );
 };
 

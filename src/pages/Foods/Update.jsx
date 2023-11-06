@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 
 const Update = () => {
     const handleUpdate = event => {
@@ -19,6 +20,12 @@ const Update = () => {
     
 }
     return (
+    <>
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>FlavourFusion|Update</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
         <div className=" p-24">
         <h2 className="text-3xl font-bold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Update the Food item</h2>
         <form onSubmit={handleUpdate}>
@@ -111,6 +118,7 @@ const Update = () => {
 
         
         </div>
+    </>
     );
 };
 

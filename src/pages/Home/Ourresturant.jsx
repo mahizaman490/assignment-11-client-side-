@@ -2,7 +2,8 @@
 const Ourresturant = () => {
     return (
         <>
-         <div className="text-center mt-20 mb-4">
+         <div className="text-center mt-20 mb-4" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
         <h1 className="mb-14 text-5xl font-bold  bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Some Demo of Our place</h1>
         </div>
         <div className="carousel w-10/12 h-4/6 mx-7 md:ml-16 lg:ml-28">

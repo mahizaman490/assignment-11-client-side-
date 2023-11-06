@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const AllFoodItems = () => {
     return (
         <div>
-
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>FlavourFusion|AllFoodItems</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
 <div className="flex w-8/12 ml-[460px] mt-10">
 <input type="text" placeholder="Type here A Food Name" className="input input-bordered input-error w-full max-w-xs "  />
 <button className="btn btn-error">Click Here</button>

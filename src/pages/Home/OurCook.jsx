@@ -3,7 +3,7 @@
 const OurCook = () => {
     return (
        <>
-        <div className="text-center mt-20 mb-4">
+        <div className="text-center mt-20 mb-4" >
         <h1 className="mb-14 text-5xl font-bold  bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Meet Our Cook</h1>
         <div className="">
 
@@ -32,7 +32,8 @@ const OurCook = () => {
 
         </div>
         </div>
-     <div className="text-center w-8/12 mx-auto mb-10">
+     <div className="text-center w-8/12 mx-auto mb-10" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
      <p> <span className="  font-bold  bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Culinary Creativity:</span>Our Cooks have a deep passion for food and an innate creativity to craft diverse and flavorful dishes. They experiment with ingredients, flavors, and techniques to create unique culinary experiences.</p>
        <p> <span className="  font-bold  bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Technical Expertise: </span>They have a solid understanding of culinary techniques, food safety, and kitchen equipment. Whether its chopping, sautéing, or baking, they execute their skills with precision.</p>
      </div>

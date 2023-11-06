@@ -1,7 +1,13 @@
+import { Helmet } from "react-helmet";
 
 const MyOrders = () => {
     return (
         <div>
+           <Helmet>
+                <meta charSet="utf-8" />
+                <title>FlavourFusion|MyOrders</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2 className="my-10 text-center text-5xl font-bold  bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">My Orders</h2>
             <div className="grid grid-cols-1 gap-8 my-24 ml-40 ">
 
