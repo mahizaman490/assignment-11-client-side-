@@ -1,20 +1,43 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddAFoodItem = () => {
+    const { user} = useContext(AuthContext);
     const handleAdd = event => {
 
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
+        const Food_name = form.Food_name.value;
         const email = form.email.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
-        const phourl = form.phourl.value;
-        const category = form.category.value;
-        const foodOrigin = form.foodOrigin.value;
+        const Food_image = form.Food_image.value;
+        const Food_category = form.Food_category.value;
+        const Food_origin= form.Food_origin.value;
+        const description = form.description.value;
     
-      const AddFood = {name,email,price,quantity,phourl,foodOrigin,category}  
-      console.log(AddFood)
+      const newFood = {Food_name,email,price,quantity,Food_image,Food_origin,Food_category,description}  
+      console.log(newFood)
+  
+fetch('http://localhost:5000/addafooditem',{
+  method:'POST',
+  headers:{
+'content-type': 'application/json'
+  },
+body: JSON.stringify(newFood)
+
+
+})
+.then(res=>res.json())
+.then(data =>{
+    console.log(data);
+    if(data.insertedId){
+        Swal.fire("A New item added successfully!")
+    }
+})
+
 
 
     
@@ -38,7 +61,7 @@ const AddAFoodItem = () => {
                     </label>
                     <label className="input-group">
         
-                        <input type="text" name="name" placeholder="Food Name" className="input input-bordered w-full"  />
+                        <input type="text" name="Food_name" placeholder="Food Name" className="input input-bordered w-full"  />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -55,11 +78,11 @@ const AddAFoodItem = () => {
             <div className="md:flex">
                 <div className="form-control md:w-1/2">
                     <label className="label">
-                        <span className="label-text">phourl</span>
+                        <span className="label-text">Food_image</span>
                     </label>
                     <label className="input-group">
         
-                        <input type="text" name="phourl"  className="input input-bordered w-full" placeholder="PhotoURL" />
+                        <input type="text" name="Food_image"  className="input input-bordered w-full" placeholder="PhotoURL" />
                     </label>
                 </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -76,11 +99,11 @@ const AddAFoodItem = () => {
             <div className="md:flex">
                 <div className="form-control md:w-1/2">
                     <label className="label">
-                        <span className="label-text">category</span>
+                        <span className="label-text">Food_category</span>
                     </label>
                     <label className="input-group">
                             
-                        <input type="text" name="category"  className="input input-bordered w-full"  placeholder="Category"/>
+                        <input type="text" name="Food_category"  className="input input-bordered w-full"  placeholder="Food_category"/>
                     </label>
                 </div>
                 <div className="form-control md:w-1/2 ml-4">
@@ -89,7 +112,7 @@ const AddAFoodItem = () => {
                     </label>
                     <label className="input-group">
         
-                        <input type="text" name="foodOrigin" placeholder="foodOrigin" className="input input-bordered w-full" />
+                        <input type="text" name="Food_origin" placeholder="foodOrigin" className="input input-bordered w-full" />
                     </label>
                 </div>
             
@@ -99,7 +122,7 @@ const AddAFoodItem = () => {
                     </label>
                     <label className="input-group">
         
-                        <input type="email" name="email"  className="input input-bordered w-full" readOnly/>
+                        <input type="email" name="email"  className="input input-bordered w-full" defaultValue={user.email} readOnly/>
                     </label>
                 </div>
             

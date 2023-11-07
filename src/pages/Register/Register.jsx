@@ -1,10 +1,56 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const Register = () => {
-    const handleRegister = {
 
-    }
+  const {createUser } = useContext(AuthContext)
+  const [registerError, SetRegisterError] = useState('');
+  const [registerSuccess, setregisterSuccess] = useState('');
+  const navigate = useNavigate()
+    const handleRegister = event => {
+      event.preventDefault();
+   
+const form = event.target; 
+const name = form.name.value;
+const email = form.email.value;
+const password = form.password.value;
+const photoURL = form.photoURL.value;
+
+console.log(name,email,password,photoURL);
+SetRegisterError('')
+setregisterSuccess('')
+
+
+if (password.length < 6) {
+  SetRegisterError('password should be at least 6 characters or longer')
+  return;
+} else if (!/[A-Z]/.test(password)) {
+  SetRegisterError('Your password should have at least one upper case characters');
+  return;
+} else if (!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)) {
+  SetRegisterError('Your password should have a special characters');
+  return;
+}
+createUser(email,password)
+.then(result=>{
+  const user = result.user;
+  console.log(user);
+  event.target.reset()
+  navigate('/')
+  Swal.fire("welcome to our resturant!");
+})
+.catch(error => {
+  console.error(error);
+  SetRegisterError(error.message)
+})
+
+
+
+}
     return (
  <>
       <Helmet>
@@ -36,7 +82,7 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text text-white">PhotoURL</span>
                 </label>
-                <input type="text" placeholder="PhotoURL" name="photo" className="input input-bordered" required />
+                <input type="text" placeholder="PhotoURL" name="photoURL" className="input input-bordered" required />
               </div>
           
               <div className="form-control">
@@ -47,15 +93,18 @@ const Register = () => {
              
               </div>
               <div className="form-control mt-6">
-                <button className="btn  bg-gradient-to-r from-[#ff0000] to-orange-600 text-white ...">Login</button>
+                <button className="btn  bg-gradient-to-r from-[#ff0000] to-orange-600 text-white ...">Register</button>
               </div>
             </form>
             <p className="pb-3 pl-3"><span className="text-black ">have an account here? </span> <Link to='/login' className="text-white font-bold underline">LogIn</Link></p>
 
           </div>
-          {/* {
-          loginError && <p className="text-red-700">{loginError}</p>
-        } */}
+          {
+          registerError && <p className="text-white">{registerError}</p>
+        }
+        {
+          registerSuccess && <p>{registerSuccess}</p>
+        }
         </div>
        <div className="w-full">
         <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />

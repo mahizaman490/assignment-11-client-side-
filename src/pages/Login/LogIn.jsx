@@ -1,22 +1,67 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const LogIn = () => {
-    const handleLogin ={
 
-    }
-    return (
-      <>
+const {signIn,signInWithGoogle } = useContext(AuthContext)
+const [loginError,setLoginError] = useState('')
+const navigate = useNavigate()
+
+  const handleLogin = event => {
+    event.preventDefault()
+
+    const form = event.target;
+
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password);
+
+    setLoginError('')
+signIn(email,password)
+.then(result =>{
+  const user = result.user;
+  console.log(user);
+  Swal.fire("you have loggedin!");
+  event.target.reset()
+  navigate('/')
+})
+
+.catch(error =>{
+  console.error(error);
+  setLoginError(error.message)
+
+})
+  }
+const handleGoogleSignIn = () =>{
+  signInWithGoogle() 
+  .then(result =>{
+   console.log(result.user)
+   Swal.fire("you logged in successfully!")
+   navigate('/')
+  })
+  .catch(error => {
+   console.error(error)
+  })
+
+  }
+
+  return (
+    <>
       <Helmet>
-                <meta charSet="utf-8" />
-                <title>FlavourFusion|LogIn</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-            </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+        <meta charSet="utf-8" />
+        <title>FlavourFusion|LogIn</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col w-2/4">
           <div className="">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-red-500 via-orange-500 to-yellow-200  text-transparent   bg-clip-text">Login now!</h1>
-           
+
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  ">
             <form onSubmit={handleLogin} className="card-body">
@@ -31,26 +76,26 @@ const LogIn = () => {
                   <span className="label-text text-white">Password</span>
                 </label>
                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-             
+
               </div>
               <div className="form-control mt-6">
                 <button className="btn  bg-gradient-to-r from-[#ff0000] to-orange-600 text-white ...">Login</button>
               </div>
             </form>
             <p className="pb-3 pl-3"><span className="text-black">new here? </span> <Link to='/register' className="text-white underline">Register</Link></p>
-            <p><button className="btn btn-ghost w-full mb-2 text-black"> SignIn with Google</button></p>
+            <p><button className="btn btn-ghost w-full mb-2 text-black" onClick={handleGoogleSignIn}> SignIn with Google</button></p>
           </div>
-          {/* {
-          loginError && <p className="text-red-700">{loginError}</p>
-        } */}
+          {
+          loginError && <p className="text-white">{loginError}</p>
+        }
         </div>
-       <div className="w-full">
-        <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />
-       </div>
+        <div className="w-full">
+          <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />
+        </div>
       </div>
-      </>
-     
-    );
+    </>
+
+  );
 };
 
 export default LogIn;
