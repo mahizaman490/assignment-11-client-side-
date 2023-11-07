@@ -64,7 +64,7 @@
       },
       {
         "Food_name": "Shrimp Scampi",
-        "Food_image": "shrimp_scampi.jpg",
+        "Food_image": "https://i.ibb.co/sHsn8G7/shrimp-scampi-119.jpg",
         "Food_category": "Seafood",
         "quantity": "10",
         "price": 15.99,
@@ -73,7 +73,7 @@
       },
       {
         "Food_name": "Greek Salad",
-        "Food_image": "greek_salad.jpg",
+        "Food_image": "https://i.ibb.co/vkfdmhZ/Greek-Orzo-salad-22-1-of-1.jpg",
         "Food_category": "Salad",
         "quantity": "43",
         "price": 8.99,
@@ -82,7 +82,7 @@
       },
       {
         "Food_name": "Chicken Pad Thai",
-        "Food_image": "chicken_pad_thai.jpg",
+        "Food_image": "https://i.ibb.co/cTJ54qz/Chicken-Pad-Thai-9.webp",
         "Food_category": "Thai",
         "quantity": "17",
         "price": 12.99,
@@ -91,7 +91,7 @@
       },
       {
         "Food_name": "BBQ Ribs",
-        "Food_image": "bbq_ribs.jpg",
+        "Food_image": "https://i.ibb.co/drb0yTY/03d880f2ca84b83fdeb147548e7d9b12.jpg",
         "Food_category": "American",
         "quantity": "14",
         "price": 16.99,
