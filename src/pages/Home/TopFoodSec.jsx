@@ -7,7 +7,7 @@ const TopFoodSec = () => {
   const [allFoods,setAllFoods] = useState([])
  
   useEffect(()=>{
-fetch('http://localhost:5000/allFoods')
+fetch('https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/allFoods')
 .then(res => res.json())
 .then(data =>setAllFoods(data))
   },[])

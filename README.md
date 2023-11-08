@@ -1,5 +1,5 @@
 ## My website name is:FlavorFusion-Palace
-My website link: http://localhost:5173/
+My website link: https://flavor-fusion-palace.web.app/
 Here are the 5 features of my website:
 1## Top 6 products are shown on home page, full page
 Designed with animations,
