@@ -1,18 +1,24 @@
 import { Helmet } from "react-helmet";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 
 const FoodPurchase = () => {
+    const foodInfo = useLoaderData()
+    const {_id,Food_name,price} = foodInfo
+    const { user} = useContext(AuthContext);
     const handlePurchase = event => {
 
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
+        const Food_name = form.Food_name.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
         const BuyerName = form.BuyerName.value;
         const BuyerMail = form.BuyerMail.value;
         const buyingDate = form.buyingDate.value;
     
-      const purchaseFood = {name,price,quantity,BuyerName,buyingDate,BuyerMail}  
+      const purchaseFood = {Food_name,price,quantity,BuyerName,buyingDate,BuyerMail}  
       console.log(purchaseFood)
 
 
@@ -38,7 +44,7 @@ const FoodPurchase = () => {
             </label>
             <label className="input-group">
 
-                <input type="text" name="name" placeholder="Food Name" className="input input-bordered w-full"  />
+                <input type="text" name="Food_name" placeholder="Food Name" className="input input-bordered w-full"  defaultValue={Food_name}/>
             </label>
         </div>
         <div className="form-control md:w-1/2 ml-4">
@@ -47,7 +53,7 @@ const FoodPurchase = () => {
             </label>
             <label className="input-group">
 
-                <input type="text"  name="quantity" placeholder="Quantity" className="input input-bordered w-full"  />
+                <input type="text"  name="quantity" placeholder="Quantity" className="input input-bordered w-full" defaultValue={1} />
             </label>
         </div>
     </div>
@@ -59,7 +65,7 @@ const FoodPurchase = () => {
             </label>
             <label className="input-group">
 
-                <input type="text" name="BuyerName"  className="input input-bordered w-full" readOnly/>
+                <input type="text" name="BuyerName"  className="input input-bordered w-full" defaultValue={user.displayName} readOnly/>
             </label>
         </div>
         <div className="form-control md:w-1/2 ml-4">
@@ -68,7 +74,7 @@ const FoodPurchase = () => {
             </label>
             <label className="input-group">
 
-                <input type="text" name="price" placeholder="Price" className="input input-bordered w-full"  />
+                <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" defaultValue={price} />
             </label>
         </div>
     </div>
@@ -80,7 +86,7 @@ const FoodPurchase = () => {
             </label>
             <label className="input-group">
                     
-                <input type="email" name="BuyerMail"  className="input input-bordered w-full" readOnly />
+                <input type="email" name="BuyerMail"  className="input input-bordered w-full" defaultValue={user.email} readOnly />
             </label>
         </div>
         <div className="form-control md:w-1/2 ml-4">

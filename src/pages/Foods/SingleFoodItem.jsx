@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const SingleFoodItem = () => {
   const details = useLoaderData()
-  const {description,Food_name,Food_image,Food_category,price,Food_origin} = details
+  const {_id,description,Food_name,Food_image,Food_category,price,Food_origin} = details
     return (
     <>
       <Helmet>
@@ -27,7 +27,7 @@ const SingleFoodItem = () => {
        
      
           <div className="card-actions justify-end">
-           <Link to='/foodpurchase'>
+           <Link to={`/foodpurchase/${_id}`}>
            <button className="btn btn-outline btn-error w-40">Order Item</button>
            </Link>
           </div>

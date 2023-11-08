@@ -36,8 +36,9 @@ const router = createBrowserRouter([
         //this is a private page
 
         {
-            path:'/foodpurchase',
+            path:'foodpurchase/:id',
             element:<PrivateRoutes><FoodPurchase></FoodPurchase></PrivateRoutes>,
+            loader:({params})=>fetch(`http://localhost:5000/allFoods/${params.id}`) 
         },
         {
             path:'/login',

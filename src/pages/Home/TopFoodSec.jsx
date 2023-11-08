@@ -16,7 +16,7 @@ fetch('http://localhost:5000/allFoods')
 
 
 
-
+  const limitedFoods = allFoods.slice(0, 6);
 
     return (
         <>
@@ -25,10 +25,9 @@ fetch('http://localhost:5000/allFoods')
      data-aos-anchor-placement="center-bottom">Top Foods</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5" data-aos="zoom-in-down">
 
-         {
-          allFoods.map(allFood => <FoodCard key={allFood._id} allFood={allFood}></FoodCard>)
-
-         }
+        {limitedFoods.map((food) => (
+          <FoodCard key={food._id} allFood={food}></FoodCard>
+        ))}
 
         </div>
         </>
