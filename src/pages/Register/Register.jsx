@@ -7,50 +7,47 @@ import { useState } from "react";
 
 const Register = () => {
 
-  const {createUser } = useContext(AuthContext)
+  const { createUser } = useContext(AuthContext)
   const [registerError, SetRegisterError] = useState('');
   const [registerSuccess, setregisterSuccess] = useState('');
   const navigate = useNavigate()
-    const handleRegister = event => {
-      event.preventDefault();
-   
-const form = event.target; 
-const name = form.name.value;
-const email = form.email.value;
-const password = form.password.value;
-const photoURL = form.photoURL.value;
+  const handleRegister = e => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password)
+    SetRegisterError('')
+    setregisterSuccess('')
 
-console.log(name,email,password,photoURL);
-SetRegisterError('')
-setregisterSuccess('')
+    if (password.length < 6) {
+      SetRegisterError('password should be at least 6 characters or longer')
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      SetRegisterError('Your password should have at least one upper case characters');
+      return;
+    } else if (!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)) {
+      SetRegisterError('Your password should have a special characters');
+      return;
+    }
+    createUser(email, password)
+      .then(result => {
+        console.log(result.user)
 
+        e.target.reset()
+        navigate('/')
+           Swal.fire("welcome to our resturant!");
+        
 
-if (password.length < 6) {
-  SetRegisterError('password should be at least 6 characters or longer')
-  return;
-} else if (!/[A-Z]/.test(password)) {
-  SetRegisterError('Your password should have at least one upper case characters');
-  return;
-} else if (!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)) {
-  SetRegisterError('Your password should have a special characters');
-  return;
-}
-createUser(email,password)
-.then(result=>{
-  const user = result.user;
-  console.log(user);
-  event.target.reset()
-  navigate('/')
-  Swal.fire("welcome to our resturant!");
-})
-.catch(error => {
-  console.error(error);
-  SetRegisterError(error.message)
-})
+      })
+      .catch(error => {
+        console.error(error);
+        SetRegisterError(error.message)
+      })
 
 
+  }
 
-}
     return (
  <>
       <Helmet>
@@ -110,6 +107,7 @@ createUser(email,password)
         <img src="https://i.ibb.co/fnkD2wG/4189694-2238239.jpg" alt="" />
        </div>
       </div>
+    
  </>
     );
 };

@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end md:ml-48 lg:ml-72 hidden md:block  ">
         {
-            user ? <>
+            user ?.email ? <>
             
         <div className="flex">
           <div className="dropdown">

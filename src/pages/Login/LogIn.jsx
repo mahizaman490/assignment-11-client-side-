@@ -7,49 +7,43 @@ import { useState } from "react";
 
 const LogIn = () => {
 
-const {signIn,signInWithGoogle } = useContext(AuthContext)
-const [loginError,setLoginError] = useState('')
-const navigate = useNavigate()
-
-  const handleLogin = event => {
-    event.preventDefault()
-
-    const form = event.target;
-
-    const email = form.email.value;
-    const password = form.password.value;
-
-    console.log(email, password);
-
-    setLoginError('')
-signIn(email,password)
-.then(result =>{
-  const user = result.user;
-  console.log(user);
-  Swal.fire("you have loggedin!");
-  event.target.reset()
-  navigate('/')
-})
-
-.catch(error =>{
-  console.error(error);
-  setLoginError(error.message)
-
-})
-  }
-const handleGoogleSignIn = () =>{
-  signInWithGoogle() 
-  .then(result =>{
-   console.log(result.user)
-   Swal.fire("you logged in successfully!")
-   navigate('/')
+  const { signInUser,signInWithGoogle } = useContext(AuthContext);
+  const [loginError,setLoginError] = useState('')
+  
+  const navigate = useNavigate()
+  
+  const handleLogin = e => {
+  e.preventDefault();
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+  console.log(email,password)
+  setLoginError('')
+  signInUser(email,password)
+  .then(result => {
+    console.log(result.user)
+     
+  Swal.fire("you logged in successfully!")
+  
+    e.target.reset()
+    navigate('/')
   })
   .catch(error => {
-   console.error(error)
+  console.error(error);
+    setLoginError(error.message)
   })
-
+  
   }
-
+  const handleGoogleSignIn = () =>{
+   signInWithGoogle() 
+   .then(result =>{
+    console.log(result.user)
+    Swal.fire("you logged in successfully!")
+    navigate('/')
+   })
+   .catch(error => {
+    console.error(error)
+   })
+  }
   return (
     <>
       <Helmet>

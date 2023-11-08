@@ -2,10 +2,11 @@ import { Helmet } from "react-helmet";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const FoodPurchase = () => {
     const foodInfo = useLoaderData()
-    const {_id,Food_name,price} = foodInfo
+    const {_id,Food_name,price,Food_image} = foodInfo
     const { user} = useContext(AuthContext);
     const handlePurchase = event => {
 
@@ -16,10 +17,31 @@ const FoodPurchase = () => {
         const quantity = form.quantity.value;
         const BuyerName = form.BuyerName.value;
         const BuyerMail = form.BuyerMail.value;
-        const buyingDate = form.buyingDate.value;
+        const date = form.date.value;
     
-      const purchaseFood = {Food_name,price,quantity,BuyerName,buyingDate,BuyerMail}  
+      const purchaseFood = {Food_name,price,quantity,BuyerName,date,BuyerMail, item:_id,Food_image }  
       console.log(purchaseFood)
+
+      
+fetch('http://localhost:5000/myorders',{
+    method: 'POST',
+    headers:{
+        'content-type':'application/json'
+    },
+    body: JSON.stringify(purchaseFood)
+})
+.then(res=>res.json())
+.then(data =>{
+    console.log(data);
+    if(data.insertedId){
+        Swal.fire("order confirmed successfully!")
+    }
+})
+
+
+
+
+
 
 
     
@@ -91,11 +113,11 @@ const FoodPurchase = () => {
         </div>
         <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-                <span className="label-text">buyingDate</span>
+                <span className="label-text">date</span>
             </label>
             <label className="input-group">
 
-                <input type="date" name="buyingDate" placeholder="buyingDate" className="input input-bordered w-full" />
+                <input type="date" name="date" placeholder="date" className="input input-bordered w-full" />
             </label>
         </div>
     </div>
