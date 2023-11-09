@@ -10,7 +10,8 @@ const MyOrders = () => {
 
 
   const [orders, setOrders] = useState([])
-  const url = "https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/myorders"
+              
+  const url = "https://flavor-fusion-palace-server.vercel.app/myorders"
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
@@ -22,7 +23,7 @@ const MyOrders = () => {
 
 
   const handleDelete = id => {
-    fetch(`https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/myorders/${id}`, {
+    fetch(`https://flavor-fusion-palace-server.vercel.app/myorders/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())

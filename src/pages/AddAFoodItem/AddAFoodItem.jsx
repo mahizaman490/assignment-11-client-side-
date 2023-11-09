@@ -21,7 +21,7 @@ const AddAFoodItem = () => {
       const newFood = {Food_name,email,price,quantity,Food_image,Food_origin,Food_category,description}  
       console.log(newFood)
   
-fetch('https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/addafooditem',{
+fetch('https://flavor-fusion-palace-server.vercel.app/addafooditem',{
   method:'POST',
   headers:{
 'content-type': 'application/json'

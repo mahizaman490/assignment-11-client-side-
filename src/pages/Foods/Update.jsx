@@ -27,7 +27,7 @@ const Update = () => {
       const updateFood = {Food_name,email,price,quantity,Food_image,Food_origin,Food_category,description}  
       console.log(updateFood)
   
-fetch(`https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/addafooditem/${_id}`,{
+fetch(`https://flavor-fusion-palace-server.vercel.app/addafooditem/${_id}`,{
   method:'PUT',
   headers:{
 'content-type': 'application/json'

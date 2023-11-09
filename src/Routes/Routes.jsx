@@ -31,14 +31,14 @@ const router = createBrowserRouter([
         {
             path:'/singlefooditem/:id',
             element:<SingleFoodItem></SingleFoodItem>,
-            loader:({params})=>fetch(`https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/allFoods/${params.id}`) 
+            loader:({params})=>fetch(`https://flavor-fusion-palace-server.vercel.app/allFoods/${params.id}`) 
         },
         //this is a private page
 
         {
             path:'foodpurchase/:id',
             element:<PrivateRoutes><FoodPurchase></FoodPurchase></PrivateRoutes>,
-            loader:({params})=>fetch(`https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/allFoods/${params.id}`) 
+            loader:({params})=>fetch(`https://flavor-fusion-palace-server.vercel.app/allFoods/${params.id}`) 
         },
         {
             path:'/login',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         {
             path:'/myaddedfooditems',
             element:<PrivateRoutes><MyAddedFoodItem></MyAddedFoodItem></PrivateRoutes>,
-            loader: () => fetch('https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/addafooditem')
+            loader: () => fetch('https://flavor-fusion-palace-server.vercel.app/addafooditem')
         },
         {
             path:'/addafooditem',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
         {
             path:'/update/:id',
             element:<PrivateRoutes><Update></Update></PrivateRoutes>,
-            loader: ({params}) => fetch(`https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/addafooditem/${params.id}`)
+            loader: ({params}) => fetch(`https://flavor-fusion-palace-server.vercel.app/addafooditem/${params.id}`)
         },
         {
             path:'/blog',

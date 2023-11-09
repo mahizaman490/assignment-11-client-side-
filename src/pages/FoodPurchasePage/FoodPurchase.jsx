@@ -23,7 +23,7 @@ const FoodPurchase = () => {
       console.log(purchaseFood)
 
       
-fetch('https://flavor-fusion-palace-server-6bj1jjsbj-mahizaman490.vercel.app/myorders',{
+fetch('https://flavor-fusion-palace-server.vercel.app/myorders',{
     method: 'POST',
     headers:{
         'content-type':'application/json'
