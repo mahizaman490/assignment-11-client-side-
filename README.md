@@ -1,5 +1,8 @@
 ## My website name is:FlavorFusion-Palace
 My website link: https://flavor-fusion-palace.web.app/
+
+This is a restaurant for ordering food, user can add food to cart, add to menu created by
+himself, update and delete, he must login to do this
 Here are the 5 features of my website:
 1## Top 6 products are shown on home page, full page
 Designed with animations,
